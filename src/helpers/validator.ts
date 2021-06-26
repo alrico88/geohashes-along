@@ -1,7 +1,7 @@
 import {GeoJSON, Geometry} from 'geojson';
 
 class InputError extends Error {
-  public override message = 'Unsupported GeoJSON type. Only LineString and MultiLineString Features or Geometries are allowed';
+  public message = 'Unsupported GeoJSON type. Only LineString and MultiLineString Features or Geometries are allowed';
 }
 
 /**
