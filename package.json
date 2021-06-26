@@ -1,0 +1,59 @@
+{
+  "version": "0.1.0",
+  "name": "geohashes-along",
+  "author": "Alberto Rico",
+  "keywords": [],
+  "repository": {
+    "url": ""
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/geohashes-along.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "docs": "typedoc src/index.ts --readme",
+    "coveralls": "tsdx test --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "@types/geojson": "^7946.0.7",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.23.0",
+    "husky": "^6.0.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typedoc": "^0.20.34",
+    "typedoc-plugin-markdown": "^3.6.0",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "@turf/bearing": "^6.4.0",
+    "@turf/meta": "^6.4.0",
+    "geohashes-between": "^2.0.3"
+  }
+}
